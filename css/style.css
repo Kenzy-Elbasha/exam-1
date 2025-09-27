@@ -1,0 +1,398 @@
+.section {
+    padding: 8%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ^ navbar */
+.navbar .navbar-brand {
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding-inline: 0 !important;
+    margin-inline: 25px;
+}
+
+.navbar-nav.navbar-nav .nav-link::after {
+    content:'' ;
+    width: 0%;
+    height: 1.5px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link.active {
+    color: white;
+}
+
+.navbar-nav .nav-link.active::after {
+    width: 100%;
+}
+
+body:not(:has(a[href="#home"].active)) .navbar {
+    position: fixed !important;
+    animation: navbar forwards 1s;
+    background-color: white !important;
+    color: black !important;
+} 
+
+body:not(:has(a[href="#home"].active)) .navbar a {
+    background-color: white !important;
+    color: black !important;
+}
+
+body:not(:has(a[href="#home"].active)) .navbar .nav-link::after {
+    background-color: #000000 ;
+}
+
+@keyframes navbar {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+       transform: translateY(0px);
+       opacity: 1; 
+    }
+    
+}
+
+/* ^ header section */
+
+section.header-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)) , url("../images/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.header-content .social-icon a {
+    color: white !important;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.659);
+    padding: 7px;
+}
+
+.header-content h1 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ^ about section */
+
+.about .container .image {
+    position: relative;
+    display: inline-block;
+}
+
+.about .container .image::before {
+    content: '';
+    position: absolute;
+    bottom: -1%;
+    left: -10%;
+    width: 80%;
+    height: 80%;
+    background-image: radial-gradient(#000000 1.5px, transparent 1px);
+    background-size: 15px 15px;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.about .container .info .btn1:hover {
+    color: black !important;
+    background-color: white !important;
+}
+
+/* ^ services section */
+
+#services h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 47%;
+    background-image: radial-gradient(#0000009f 1.5px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+    transition: all 0.5s;
+}
+
+#services .col:hover .icon {
+    color: white !important;
+    background-color: black !important;
+}
+
+.services .container h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+/* ^ works section */
+
+#works h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15%;
+    height: 47%;
+    background-image: radial-gradient(#0000009f 1.5px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.works .container h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+#works .content .nav-tabs .nav-link {
+    color: #000000 !important;
+}
+
+.works .icons span a {
+    width: 35px;
+    height: 35px;
+    transition: all 0.5s;
+}
+
+.works .icons span a:hover {
+    color: black !important;
+    background-color: white !important;
+}
+
+.works .content .item .layer {
+    background-color: rgba(255, 255, 255, 0.827);
+    position: absolute;
+    inset: 0;
+    transform: scale(0.85);
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.works .content .item:hover .layer {
+    transform: scale(0.95);
+    opacity: 1;
+}
+
+.works .layer p {
+    transform: translateY(-40px);
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.works .layer .icons {
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all .6s ease;
+}
+
+.works .item:hover .layer p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.works .item:hover .layer .icons {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ^ clients section */
+
+#clients h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 19%;
+    height: 47%;
+    background-image: radial-gradient(#0000009f 1.5px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.clientes .container h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.clients .carousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #0000006f;
+}
+
+.clients .carousel .carousel-indicators .active {
+    background-color: #819581;
+}
+
+.clients .carousel .carousel-item img{
+    width: 100px;
+}
+
+/* ^ team section */
+
+#team h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 17%;
+    height: 47%;
+    background-image: radial-gradient(#0000009f 1.5px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.team .container h2 ,
+.team .container .img-text h4 ,
+.team .container .img-text h5
+{
+    font-family: "Montserrat", sans-serif;
+}
+
+.single-team,
+.img-area {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-area img {
+    width: 100%;
+    transition: transform 0.6s ease;
+}
+
+.social {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.899);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0.85) rotateY(270deg);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.social ul {
+    display: flex;
+    gap: 15px;
+}
+
+.social ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    background: #000;
+    text-decoration: none;
+    border-radius: 50%;
+    border-style: solid;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.img-text {
+    background-color: #686868;
+}
+
+.social ul li a:hover {
+    background: #fff;
+    color: #000;
+}
+
+.img-area:hover img {
+    transform: scale(1.2);
+}
+
+.img-area:hover .social {
+    transform: translate(-50%, -50%) scale(0.95) rotateY(0deg);
+    opacity: 1;
+}
+
+.single-team:hover .social {
+    transform: translate(-50%, -50%) scale(0.95) rotateY(0deg);
+    opacity: 1;
+}
+
+/* ^ contact section */
+
+#contact h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 19%;
+    height: 47%;
+    background-image: radial-gradient(#0000009f 1.5px, transparent 1px);
+    background-size: 8px 8px;
+    opacity: 0.1;
+}
+
+.contact .container h2 {
+    font-family: "Montserrat", sans-serif;
+}
+
+.contact .item .icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.contact .item .icon i {
+    color: black;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+
+.contact .item:hover .icon {
+    background-color: black !important;
+}
+
+.contact .item:hover .icon i {
+    color: white;
+}
+
+.contact .item h6 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contact .item p {
+    margin-bottom: 0;
+}
+
+.contact .button .btn {
+    padding: 10px 35px !important;
+    font-size: 13px !important;
+}
+
+.contact .button .btn:hover {
+    color: black !important;
+    background-color: white !important;
+}
